@@ -9,6 +9,17 @@
 </head>
 <body>
     <div id="top"></div>
+
+    <!-- MOBILE TOP BAR (shown on tablet/mobile) -->
+    <div class="mobile-topbar">
+        <a href="#top" class="mobile-overlay-name artist-name-link">Amelia Kim</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
     <div class="app-container">
         <!-- SIDEBAR NAVIGATION -->
         <aside class="sidebar">
@@ -18,7 +29,7 @@
             
             <nav class="sidebar-nav">
                 <div class="nav-section">
-                    <h2 class="nav-section-title"><a href="#portfolio-index" class="portfolio-link">Portfolio</a></h2>
+                   
                     <div class="works-list">
                         <a href="#fluid-forms" class="nav-item active" data-work="fluid-forms">
                             <span class="nav-label">Painting</span>
@@ -71,15 +82,13 @@
 
             <div class="sidebar-footer">
                 <p>&copy; 2026 Amelia Kim. All rights reserved.</p>
-                <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
             </div>
         </aside>
 
         <!-- MOBILE OVERLAY (visible only on tablet/mobile) -->
-        <div class="mobile-overlay">
+        <div class="mobile-overlay" id="mobile-overlay">
             <div class="mobile-overlay-menu">
-                <a href="#portfolio-index" class="overlay-link" data-target="portfolio-index">Portfolio</a>
+                
                 <a href="#fluid-forms" class="overlay-link" data-work="fluid-forms">Painting</a>
                 <a href="#abstract-meditation" class="overlay-link" data-work="abstract-meditation">Web Art</a>
                 <a href="#digital-dreams" class="overlay-link" data-work="digital-dreams">Drawing</a>
@@ -92,7 +101,6 @@
                 <a href="#about" class="overlay-link" data-section="about">About</a>
                 <a href="#contact" class="overlay-link" data-section="contact">Contact</a>
             </div>
-            <a href="#top" class="mobile-overlay-name">Amelia Kim</a>
         </div>
 
         <!-- MAIN CONTENT AREA -->

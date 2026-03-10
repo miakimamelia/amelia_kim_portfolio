@@ -1300,14 +1300,15 @@ h3 {
 
 @media (max-width: 1024px) {
     .portfolio-index {
-        padding: 2.5rem 1.25rem;
+        padding: 2.5rem 4rem;
     }
 
     .portfolio-index .gallery-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.2rem;
         max-width: 100%;
-        padding-right: 0;
+        margin: 0;
+        padding: 0 1.5rem;
     }
 }
 

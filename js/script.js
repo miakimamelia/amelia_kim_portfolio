@@ -28,7 +28,7 @@ function initNavigation() {
     topLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            scrollToTop();
+            scrollToSection('portfolio-index');
             closeMobileMenu();
         });
     });
@@ -115,27 +115,47 @@ window.addEventListener('load', function() {
 
 function initMobileMenu() {
     const menuToggle = document.getElementById('mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            sidebar.classList.toggle('active');
-        });
-    }
-    
+    const overlay = document.getElementById('mobile-overlay');
+    const overlayLinks = document.querySelectorAll('.overlay-link');
+
+    if (!menuToggle || !overlay) return;
+
+    const toggleMenu = (e) => {
+        if (e) e.stopPropagation();
+        const isOpen = overlay.classList.toggle('open');
+        menuToggle.classList.toggle('open', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    overlayLinks.forEach(link => {
+        link.addEventListener('click', () => closeMobileMenu());
+    });
+
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.sidebar') && !e.target.closest('.mobile-menu-toggle')) {
+        if (!e.target.closest('#mobile-overlay') && !e.target.closest('#mobile-menu-toggle')) {
+            closeMobileMenu();
+        }
+    });
+
+    // Reset menu state when returning to desktop
+    window.addEventListener('resize', function() {
+        if (!window.matchMedia('(max-width: 1024px)').matches) {
             closeMobileMenu();
         }
     });
 }
 
 function closeMobileMenu() {
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar) {
-        sidebar.classList.remove('active');
+    const overlay = document.getElementById('mobile-overlay');
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+
+    if (overlay) overlay.classList.remove('open');
+    if (menuToggle) {
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
     }
 }
 
