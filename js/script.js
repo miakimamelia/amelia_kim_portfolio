@@ -5,6 +5,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initMobileMenu();
+    initCarousels();
+    initVideoTilePreview();
 });
 
 // ==========================================
@@ -166,3 +168,69 @@ function closeMobileMenu() {
 // Contact form now handled by Formspree
 
 console.log('🎨 Welcome to Amelia Kim\'s portfolio website!');
+
+// ==========================================
+// VIDEO TILE LAST FRAME PREVIEW
+// ==========================================
+
+function initVideoTilePreview() {
+    const video = document.getElementById('video-tile-preview');
+    if (!video) return;
+    video.addEventListener('loadedmetadata', function() {
+        video.currentTime = 10;
+    });
+}
+
+// ==========================================
+// CAROUSEL
+// ==========================================
+
+function initCarousels() {
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const dotsContainer = carousel.querySelector('.carousel-dots');
+
+        if (slides.length <= 1) {
+            prevBtn.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            return;
+        }
+
+        let current = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function goTo(index) {
+            current = (index + slides.length) % slides.length;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            carousel.querySelectorAll('.carousel-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Touch / swipe support
+        let startX = 0;
+        track.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) {
+                goTo(diff > 0 ? current + 1 : current - 1);
+            }
+        });
+    });
+}
