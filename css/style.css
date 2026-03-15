@@ -476,16 +476,22 @@ h3 {
    ========================================== */
 
 .portfolio-index {
-    padding: 5rem 0 10rem;
-    background: var(--bg-white);
+    padding: 3rem 0 6rem;
+    background: #ffffff;
+}
+
+.portfolio-index.hidden {
+    display: none;
 }
 
 .portfolio-grid-title {
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-dark);
-    margin: 0 auto 1.25rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #1a1a1a;
+    margin: 0 auto 1.5rem;
     max-width: 1100px;
     padding: 0 1.5rem;
 }
@@ -493,36 +499,29 @@ h3 {
 .portfolio-index .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 0 auto;
     max-width: 1100px;
     padding: 0 1.5rem;
 }
 
-.portfolio-index {
-    padding-right: 1rem;
-}
-
 .portfolio-index .gallery-item {
-    background: #0a0a0a;
-    border-radius: 8px;
+    background: transparent;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: all 0.25s ease;
+    box-shadow: none;
+    transition: opacity 0.2s ease;
     cursor: pointer;
 }
 
 .portfolio-index .gallery-item:hover {
-    transform: none;
-    box-shadow: none;
+    opacity: 0.8;
 }
 
-/* remove any unwanted borders/lines */
 .portfolio-index .gallery-item,
 .portfolio-index .gallery-image {
     border: none;
 }
-
 
 .portfolio-index .gallery-image {
     width: 100%;
@@ -530,59 +529,34 @@ h3 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
-.gallery-video-tile {
-    position: relative;
-    overflow: hidden;
-    background: #000;
+.gallery-image.cool-filter,
+.design-filter,
+.collage-filter,
+.drawing-filter {
+    filter: none;
 }
-
-.gallery-tile-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.gallery-image.cool-filter {
-    filter: saturate(0.65) hue-rotate(-1deg);
-    transition: filter 0.2s ease;
-}
-
-.design-filter {
-    filter: brightness(0.68) contrast(2.12);
-    transition: filter 0.2s ease;
-}
-
-
-
-.collage-filter {
-    filter: brightness(1.2) contrast(1.08);
-    transition: filter 0.2s ease;
-}
-
 
 .portfolio-index .gallery-info {
     padding: 0;
     background: transparent;
-    text-align: center;
+    text-align: left;
 }
 
 .portfolio-index .gallery-info h3 {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    color: var(--text-dark);
+    margin: 0.4rem 0 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #999;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .portfolio-index .gallery-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-decoration: none;
     box-shadow: none;
     overflow: hidden;
@@ -1316,22 +1290,15 @@ h3 {
 
 @media (max-width: 1024px) {
     .portfolio-index {
-        padding: 2.5rem 4rem;
+        padding: 2rem 1.5rem;
     }
 
     .portfolio-index .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
         max-width: 100%;
         margin: 0;
-        padding: 0 1.5rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .portfolio-index .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        padding: 0;
     }
 }
 
@@ -1388,10 +1355,18 @@ h3 {
     }
 
     .featured-grid,
-    .gallery-grid,
     .products-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio-index .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .portfolio-index .gallery-info h3 {
+        font-size: 0.7rem;
     }
 
     .product-image {
