@@ -101,7 +101,7 @@
                 <h2 class="portfolio-grid-title">Portfolio</h2>
                 <div class="gallery-grid">
                     <a href="#extra5" class="gallery-item">
-                        <div class="gallery-image collage-filter" style="background: url('images/collage.JPG') center/cover no-repeat;"></div>
+                        <div class="gallery-image collage-filter" style="background: url('collage/collage.jpg') center/cover no-repeat; filter: brightness(1.35);"></div>
                         <div class="gallery-info">
                             <h3>Collage</h3>
                         </div>
@@ -113,7 +113,7 @@
                         </div>
                     </a>
                     <a href="#chromatic-movement" class="gallery-item">
-                        <div class="gallery-image design-filter" style="background: url('images/DSCF4120.jpg') center/cover no-repeat;"></div>
+                        <div class="gallery-image design-filter" style="background: url('images/DSCF4120.jpg') center/contain no-repeat, linear-gradient(to bottom, #c8c4c0 50%, #b5b1ad 50%);"></div>
                         <div class="gallery-info">
                             <h3>Metal Work</h3>
                         </div>
@@ -125,13 +125,13 @@
                         </div>
                     </a>
                     <a href="#extra3" class="gallery-item">
-                        <div class="gallery-image cool-filter" style="background: url('images/moss-2.JPG') center/cover no-repeat;"></div>
+                        <div class="gallery-image cool-filter" style="background: url('photography/ED1EB3BF-4480-4F8F-BDB4-56D10544D9E4-10496-00000190B55D6B61 2.JPG') center/cover no-repeat;"></div>
                         <div class="gallery-info">
                             <h3>Photography</h3>
                         </div>
                     </a>
                     <a href="#extra1" class="gallery-item">
-                        <div class="gallery-image cool-filter" style="background: url('images/sculpture.png') center/cover no-repeat;"></div>
+                        <div class="gallery-image cool-filter" style="background: url('sculpture/DSC00338.JPG') center/cover no-repeat; filter: contrast(1.15);"></div>
                         <div class="gallery-info">
                             <h3>Sculpture</h3>
                         </div>
@@ -164,11 +164,15 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/collage.JPG');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Collage | 2024</p>
-                                    <p class="work-description">Layered paper and found imagery exploring rhythm and negative space.</p>
-                                    <p class="work-details">Mixed media collage</p>
+                                <div class="work-figure">
+                                    <img src="collage/collage.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Mixed media on paper, 18 x 24 in | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="collage/colll (1).png" alt="" class="work-img">
+                                    <p class="work-meta">Mixed media on paper | 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -228,10 +232,16 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/DSCF4120.jpg');"></div>
+                                <div class="work-figure">
+                                    <img src="images/DSCF4120.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Silver, copper | 2024</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/DSCF4137.JPG');"></div>
+                                <div class="work-figure">
+                                    <img src="images/DSCF4137.JPG" alt="" class="work-img">
+                                    <p class="work-meta">Silver, copper | 2024</p>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-btn carousel-prev">&#8249;</button>
@@ -247,33 +257,46 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/painting.jpg');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Painting | 2024</p>
-                                    <p class="work-description">An exploration of spatial dynamics and material transformation, this immersive installation combines light, sound, and architectural intervention to create a dialogue between viewer and environment.</p>
-                                    <p class="work-details">4K digital video (16:9), color, sound, 148'</p>
+                                <div class="work-figure">
+                                    <img src="images/painting.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Oil on canvas, 24 x 30 in | 2024</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/paintingbed.jpg');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Oil paint | 2020</p>
+                                <div class="work-figure">
+                                    <img src="images/paintingbed.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Oil on canvas, 36 x 48 in | 2020</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/moon.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/moon.png" alt="" class="work-img">
+                                    <p class="work-meta">Acrylic on canvas, 16 x 20 in | 2023</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/paintinglandscape.JPG');"></div>
+                                <div class="work-figure">
+                                    <img src="images/paintinglandscape.JPG" alt="" class="work-img">
+                                    <p class="work-meta">Oil on canvas, 24 x 36 in | 2022</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/abstract.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/abstract.png" alt="" class="work-img">
+                                    <p class="work-meta">Acrylic on canvas, 18 x 24 in | 2023</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/lady.jpg');"></div>
+                                <div class="work-figure">
+                                    <img src="images/lady.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Oil on canvas, 20 x 24 in | 2022</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/rainbow.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/rainbow.png" alt="" class="work-img">
+                                    <p class="work-meta">Acrylic on canvas, 16 x 20 in | 2023</p>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-btn carousel-prev">&#8249;</button>
@@ -289,11 +312,45 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/moss-2.JPG');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Photography | 2024</p>
-                                    <p class="work-description">Explorations in light and translucency across modular studies.</p>
-                                    <p class="work-details">Archival pigment print</p>
+                                <div class="work-figure">
+                                    <img src="photography/ED1EB3BF-4480-4F8F-BDB4-56D10544D9E4-10496-00000190B55D6B61 2.JPG" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/1.jpg" alt="" class="work-img high-contrast">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/1-51.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/moss-3 2.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/moss-6.JPG" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/DSCF5109.JPG" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="work-figure">
+                                    <img src="photography/moss-2.jpg" alt="" class="work-img">
+                                    <p class="work-meta">Digital photograph | 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -310,19 +367,15 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/sculpture.png');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Mixed media | 2024</p>
-                                    <p class="work-description">Physical study in form and mass, balancing organic contours with structural tension.</p>
-                                    <p class="work-details">Mixed media sculpture, variable dimensions</p>
+                                <div class="work-figure">
+                                    <img src="images/sculpture.png" alt="" class="work-img">
+                                    <p class="work-meta">Mixed media, variable dimensions | 2024</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/wunderkammer.png');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Installation | 2024</p>
-                                    <p class="work-description">Cabinet-of-curiosities inspired installation combining objects, light, and reflection to invite slow looking and discovery.</p>
-                                    <p class="work-details">Mixed media installation, site-responsive</p>
+                                <div class="work-figure">
+                                    <img src="images/wunderkammer.png" alt="" class="work-img">
+                                    <p class="work-meta">Mixed media installation, site-responsive | 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -339,11 +392,9 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/softsculpture.png');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Textile sculpture | 2024</p>
-                                    <p class="work-description">Tactile piece exploring softness, gravity, and drape to reframe spatial weight.</p>
-                                    <p class="work-details">Textile, stuffing; site-responsive installation</p>
+                                <div class="work-figure">
+                                    <img src="images/softsculpture.png" alt="" class="work-img">
+                                    <p class="work-meta">Textile and stuffing, variable dimensions | 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -360,11 +411,11 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-video-wrap">
-                                    <iframe src="https://www.youtube.com/embed/KWEaxohOLnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="work-video"></iframe>
-                                </div>
-                                <div class="work-info">
-                                    <p class="work-meta">Video/Animation | 2024</p>
+                                <div class="work-figure">
+                                    <div class="work-video-wrap">
+                                        <iframe src="https://www.youtube.com/embed/KWEaxohOLnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="work-video"></iframe>
+                                    </div>
+                                    <p class="work-meta">Digital animation, color, sound | 2024</p>
                                 </div>
                             </div>
                         </div>
@@ -381,24 +432,34 @@
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/webartprojects.png');"></div>
-                                <div class="work-info">
-                                    <p class="work-meta">Website art project | 2024</p>
-                                    <p class="work-description">Interactive web-based artwork exploring digital space, light, and user-driven narrative. Built to be experienced fluidly across devices.</p>
-                                    <p class="work-details">Responsive web experience</p>
+                                <div class="work-figure">
+                                    <img src="images/webartprojects.png" alt="" class="work-img">
+                                    <p class="work-meta">HTML, CSS, JavaScript | 2024</p>
                                 </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/webartprojects2.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/webartprojects2.png" alt="" class="work-img">
+                                    <p class="work-meta">HTML, CSS, JavaScript | 2024</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/webartprojects3.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/webartprojects3.png" alt="" class="work-img">
+                                    <p class="work-meta">HTML, CSS, JavaScript | 2024</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/webart4.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/webart4.png" alt="" class="work-img">
+                                    <p class="work-meta">HTML, CSS, JavaScript | 2024</p>
+                                </div>
                             </div>
                             <div class="carousel-slide">
-                                <div class="work-image contain-image" style="background-image: url('images/webart5.png');"></div>
+                                <div class="work-figure">
+                                    <img src="images/webart5.png" alt="" class="work-img">
+                                    <p class="work-meta">HTML, CSS, JavaScript | 2024</p>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-btn carousel-prev">&#8249;</button>
@@ -422,6 +483,9 @@
                                 Amelia builds worlds from repetition — thousands of ink dots accumulating into dense, coiling forms that read as both organism and machine. A self-taught coder and interdisciplinary artist working across drawing, soft sculpture, installation, and web-based art, she approaches every new medium as a room to inhabit. Amelia's pointillism drawings morph under the eye: spiraling shells become neural networks, seed pods dissolve into gears, ghost-like faces surface and retreat. Her practice is both meditative and mischievous — she spends hours in the trance of mark-making, then hand-sews stuffed creatures with drawn-on eyes and invites others to use them to tear down walls. She codes websites that feel less like pages and more like places. Amelia's environments are organic but alien, tender but strange — the slowest gestures holding the most life.</p>
                             
                             
+                        </div>
+                        <div class="about-photo">
+                            <img src="DSCF6825.JPG" alt="Amelia Kim" class="artist-photo">
                         </div>
                     </div>
                 </div>
